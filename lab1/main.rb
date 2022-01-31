@@ -16,3 +16,15 @@ def greeting
   puts output_string
   output_string
 end
+
+def foobar(first_number, second_number)
+  puts "First number: #{first_number}, second number: #{second_number}"
+  output = if first_number == 20 || second_number == 20
+             second_number.to_i
+           else
+             first_number + second_number
+           end
+
+  puts "Result: #{output}"
+  output
+end
