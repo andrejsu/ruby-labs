@@ -5,3 +5,9 @@ def foo(word)
     word.reverse
   end
 end
+
+def foo_cli
+  print 'Please enter any word: '
+  input_word = gets.chomp
+  foo(input_word)
+end
