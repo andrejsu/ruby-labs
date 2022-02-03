@@ -33,4 +33,11 @@ RSpec.describe FileHandler do
       expect { subject.index }.to output(string).to_stdout
     end
   end
+
+  describe '#find' do
+    let(:index) { 1 }
+    it 'finds a specific line in the file and returns it' do
+      expect(subject.find(index)).to eq(array[index].strip.chomp)
+    end
+  end
 end
