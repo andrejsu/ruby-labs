@@ -48,4 +48,18 @@ RSpec.describe FileHandler do
       expect(subject.where(pattern)).to eq(found_strings)
     end
   end
+
+  describe '#update' do
+    let(:id) { 0 }
+    let(:text) { 'This line has been changed c:' }
+    it 'updates a specific line of the file' do
+      subject.update(id, text)
+
+      lines = []
+      File.open(TEST_FILE_PATH) do |review_file|
+        lines = review_file.readlines
+      end
+      expect(lines[id].strip.chomp).to eq(text)
+    end
+  end
 end
