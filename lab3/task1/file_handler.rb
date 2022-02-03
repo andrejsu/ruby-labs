@@ -34,7 +34,7 @@ class FileHandler
     rewrite { |line, index| id == index ? text : line }
   end
 
-  def delete
+  def delete(id)
     rewrite { |line, index| id == index ? next : line }
   end
 
