@@ -62,4 +62,17 @@ RSpec.describe FileHandler do
       expect(lines[id].strip.chomp).to eq(text)
     end
   end
+
+  describe '#delete' do
+    let(:id) { 0 }
+    it 'delete a specific line of the file' do
+      subject.delete(id)
+
+      lines = []
+      File.open(TEST_FILE_PATH) do |review_file|
+        lines = review_file.readlines
+      end
+      expect(lines[id].strip.chomp).to be_empty
+    end
+  end
 end
