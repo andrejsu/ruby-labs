@@ -40,4 +40,12 @@ RSpec.describe FileHandler do
       expect(subject.find(index)).to eq(array[index].strip.chomp)
     end
   end
+
+  describe '#where' do
+    let(:pattern) { 'Ryan' }
+    let(:found_strings) { ['Ryan Gosling', 'Ryan Reynolds'] }
+    it 'finds and returns all rows where the specified pattern exists' do
+      expect(subject.where(pattern)).to eq(found_strings)
+    end
+  end
 end
