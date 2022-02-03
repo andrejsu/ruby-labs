@@ -27,4 +27,10 @@ RSpec.describe FileHandler do
       end
     end
   end
+
+  describe '#index' do
+    it 'prints the contents of the file' do
+      expect { subject.index }.to output(string).to_stdout
+    end
+  end
 end
