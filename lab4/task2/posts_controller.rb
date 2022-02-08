@@ -16,7 +16,9 @@ class PostsController < Controller
     return if text.downcase == 'q'
 
     @elements.push(text)
-    puts "Post: #{text}\nid: #{@elements.length}"
+    id = @elements.length
+    puts "Post: #{text}\nid: #{id}"
+    { id => @elements[id - 1] }
   end
 
   def update
@@ -31,6 +33,7 @@ class PostsController < Controller
 
     @elements[id - 1] = text
     puts "#{id}. #{@elements[id - 1]}"
+    { id => @elements[id - 1] }
   end
 
   def destroy
@@ -41,5 +44,6 @@ class PostsController < Controller
 
     @elements.delete_at(id - 1)
     puts "Post №#{id} deleted"
+    @elements[id - 1]
   end
 end

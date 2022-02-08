@@ -3,8 +3,8 @@ require_relative 'resource'
 class Controller
   extend Resource
 
-  def initialize
-    @elements = []
+  def initialize(elements = [])
+    @elements = elements
   end
 
   def index
@@ -17,7 +17,7 @@ class Controller
 
   def validate_input
     loop do
-      yield
+      yield if block_given?
 
       input = gets.chomp
       break if input.downcase == 'q'

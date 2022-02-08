@@ -1,5 +1,5 @@
 require 'rspec'
-require_relative '../task1/cash_machine'
+require_relative '../../task1/cash_machine'
 
 TEST_FILE_PATH = './test_file.txt'.freeze
 
