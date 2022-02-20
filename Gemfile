@@ -9,9 +9,9 @@ group :test do
 end
 
 group :test, :development do
+  gem 'rack'
+  gem 'rails', '>= 6.1.0', '< 7.0.0'
   gem 'rspec'
   gem 'rubocop'
-  gem 'rack'
 end
 
-# gem "rails"
