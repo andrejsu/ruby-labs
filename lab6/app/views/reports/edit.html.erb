@@ -1,0 +1,14 @@
+<%= form_with html: { class: 'form' }, model: @report do |form| %>
+  <%= render 'errors/form_errors', model: @report %>
+
+  <div class='form-group'>
+    <%= form.label :grade %>
+    <%= form.text_field :grade %>
+  </div>
+
+  <div class='form-buttons'>
+    <%= form.submit 'Save', class:'btn' %>
+    <%= link_to 'Back', root_path, class:'btn' %>
+  </div>
+
+<% end %>
