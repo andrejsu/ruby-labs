@@ -1,0 +1,47 @@
+a {
+  text-decoration: none;
+}
+
+ul {
+  padding: 0;
+
+  list-style: none;
+}
+
+h1 {
+  margin: 0 0 40px;
+
+  font-family: Roboto, serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+
+  color: #000000;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+
+  padding: 50px 122px;
+}
+
+.btn {
+  padding: 5px 10px;
+
+  background: #FFFFFF;
+
+  border: 1px solid #000000;
+  box-sizing: border-box;
+
+  box-shadow: 0 2px 0 #000000;
+  border-radius: 8px;
+
+  font-family: Roboto Mono, serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 21px;
+
+  color: #000000;
+}
