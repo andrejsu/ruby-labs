@@ -1,0 +1,100 @@
+.title {
+  align-self: center;
+}
+
+.add-buttons {
+  display: flex;
+
+  margin: 0 0 39px;
+
+  a:first-child {
+    margin-right: 30px;
+  }
+}
+
+.reports {
+  display: flex;
+  flex-direction: column;
+}
+
+.report {
+  margin-bottom: 43px;
+
+  &-title {
+    margin: 0 0 7px;
+
+    font-family: Roboto, serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 21px;
+
+    color: #000000;
+  }
+
+  &-author {
+    margin: 0 0 5px;
+
+    font-family: Roboto, serif;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 14px;
+
+    color: #000000;
+  }
+
+  &-description {
+    margin: 0 0 18px;
+
+    font-family: Roboto, serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+
+    color: #000000;
+  }
+
+  &-grade {
+    margin: 0;
+
+    font-family: Roboto Mono, serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+
+    color: #000000;
+  }
+
+  &-buttons {
+    display: flex;
+
+    align-items: center;
+
+    li:first-child {
+      margin-right: 21px;
+    }
+  }
+}
+
+.auth-links {
+  display: flex;
+  justify-content: space-between;
+
+  font-family: Roboto, serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 21px;
+
+  color: #000000;
+
+  & li a {
+    color: #000000;
+
+    &:hover {
+      color: #999999;
+    }
+  }
+}

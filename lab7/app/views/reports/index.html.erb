@@ -1,0 +1,35 @@
+<%= render 'registrations/authentication' %>
+
+<h1 class='title'>Lab reports</h1>
+
+<% if user_signed_in? %>
+  <div class='add-buttons'>
+    <%= link_to 'Add report', new_report_path, class: 'btn' %>
+  </div>
+<% end %>
+
+<ul class='reports'>
+  <% @reports.each do |report| %>
+    <li class='report'>
+      <h2 class='report-title'><%= report.title %></h2>
+      <p class='report-author'><%= report.user.format_user %></p>
+      <p class='report-description'><%= report.description %></p>
+      <% if user_signed_in? %>
+        <ul class='report-buttons'>
+          <li>
+            <% if report.grade.blank? %>
+              <%= link_to 'Add grade', edit_report_path(report), class: 'btn' %>
+            <% else %>
+              <p class='report-grade'>Mark: <%= report.format_grade %></p>
+            <% end %>
+          </li>
+          <li>
+            <%= link_to "Destroy", report_path(report), method: :delete,
+                        data: { confirm: "Are you sure?" }, class: 'btn' %>
+          </li>
+        </ul>
+      <% end %>
+    </li>
+  <% end %>
+</ul>
+
