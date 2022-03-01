@@ -1,5 +1,9 @@
 # Лабораторные работы по Ruby
 
+Jira backlog: [tap](https://andrejsu.atlassian.net/jira/software/projects/RL/boards/5)
+
+Demo: [laboratory work №7](https://report-app-sevsu.herokuapp.com/)
+
 ## Инициализация проекта
 
 Чтобы проект заработал необходимо выполнить следующие команды:
